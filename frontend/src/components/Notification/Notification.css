@@ -1,0 +1,52 @@
+.notification {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: normal;
+  min-height: 30px;
+  padding: 0 7px;
+  border: 1px solid #EE3465;
+  border-radius: 10px;
+  color: #EE3465;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  opacity: 0;
+  transition: opacity .2s linear;
+  transition: right .2s linear;
+}
+
+.notification_active {
+  opacity: 1;
+  right: 70px;
+}
+
+.notification_good {
+  color: rgb(23, 235, 23);
+  border: 1px solid rgb(23, 235, 23);
+}
+
+@media all and (max-width: 768px) {
+  .notification {
+    top: 50px;
+    right: 20px;
+  }
+
+  .notification_active {
+    right: 40px;
+  }
+}
+
+@media all and (max-width: 520px) {
+  .notification {
+    top: 10px;
+    right: 5px;
+  }
+
+  .notification_active {
+    right: 20px;
+  }
+}

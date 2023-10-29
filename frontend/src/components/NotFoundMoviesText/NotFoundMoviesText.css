@@ -1,0 +1,14 @@
+.not-found-movies-text {
+  color: white;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 1.16;
+  letter-spacing: -2px;
+  text-align: center;
+}
+
+.not-found-movies-text_error {
+  font-size: 29px;
+  line-height: 1.27586;
+  letter-spacing: -1.16px;
+}

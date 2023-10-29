@@ -1,0 +1,126 @@
+.auth-form {
+  width: 100%;
+  color: #8B8B8B;
+  display: flex;
+  flex-direction: column;
+  margin: 40px 0 0;
+  max-width: 396px;
+}
+
+.auth-form__input-title {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: normal;
+  margin: 20px 0 0;
+}
+
+.auth-form__input-title:first-child {
+  margin: 0;
+}
+
+.auth-form__input-title_none-margin {
+  margin: 0;
+}
+
+.auth-form__input {
+  background-color: #2F2F2F;;
+  border: none;
+  border-radius: 8px;
+  min-height: 46px;
+  padding: 0 15px 0;
+  margin: 10px 0 0;
+  color: white;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: normal;
+  outline: 1px solid black;
+  box-sizing: border-box;
+}
+
+.auth-form__input:focus {
+  background-color: black;
+}
+
+.auth-form__input-title_error {
+  color: #EE3465;
+  margin: 10px 0 0;
+}
+
+.auth-form__error-message {
+  color: #EE3465;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: normal;
+  margin: 57px 0 0;
+  text-align: center;
+}
+
+.auth-form__error-message_login {
+  margin: 145px 0 0;
+}
+
+.auth-form__button {
+  color: white;
+  border: none;
+  background-color: #4285F4;
+  border-radius: 3px;
+  margin: 91px 0 0;
+  padding: 0;
+  min-height: 45px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+  cursor: pointer;
+  transition: opacity .2s linear;
+}
+
+.auth-form__button:hover {
+  opacity: 0.8;
+}
+
+.auth-form__button_login {
+  margin: 179px 0 0;
+}
+
+.auth-form__button_disabled {
+  background-color: transparent;
+  border: 1px solid black;
+  cursor: default;
+  box-sizing: border-box;
+}
+
+.auth-form__button_disabled:hover {
+  opacity: 1;
+}
+
+.auth-form__button_isError {
+  margin: 20px 0 0;
+}
+
+@media all and (max-width: 520px) {
+  .auth-form {
+    margin: 80px 0 0;
+    max-width: 260px;
+  }
+  
+  .auth-form__input {
+    font-weight: 500;
+  }
+
+  .auth-form__error-message {
+    margin: 233px 0 0;
+  }
+  
+  .auth-form__button {
+    margin: 157px 0 0;
+    font-size: 12px;
+  }
+  
+  .auth-form__button_login {
+    margin: 267px 0 0;
+  }
+
+  .auth-form__button_isError {
+    margin: 20px 0 0;
+  }
+}

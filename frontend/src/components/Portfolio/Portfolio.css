@@ -1,0 +1,128 @@
+.portfolio {
+  width: 100%;
+  padding: 100px 70px 84px;
+  color: white;
+  box-sizing: border-box;
+}
+
+.portfolio__title {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.11;
+  color: #8B8B8B;
+  margin: 0;
+}
+
+.portfolio__link-list {
+  display: flex;
+  flex-direction: column;
+  margin: 50px 0 0;
+  padding: 0;
+}
+
+.portfolio__list-element {
+  list-style: none;
+  border-bottom: 1px solid #424242;
+  box-sizing: border-box;
+  min-height: 70px;
+  margin: 0 0 20px;
+}
+
+.portfolio__list-element:last-of-type {
+  border: none;
+}
+
+.portfolio__link {
+  width: 100%;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  transition: opacity .2s linear;
+}
+
+.portfolio__link:hover {
+  opacity: 0.7;
+}
+
+.portfolio__list-text {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.667;
+  letter-spacing: -1.2px;
+  display: flex;
+  align-items: flex-start;
+  margin: 0;
+}
+
+.portfolio__list-icon {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 2;
+  letter-spacing: -1.2px;
+  display: flex;
+  align-items: flex-start;
+  margin: 0;
+  transition: opacity .2s linear;
+}
+
+.portfolio__list-icon:hover {
+  opacity: 0.7;
+}
+
+@media all and (max-width: 768px) {
+  .portfolio {
+    padding: 90px 50px 49px;
+  }
+
+  .portfolio__list-element {
+    min-height: 70px;
+  }
+
+  .portfolio__list-text {
+    font-size: 28px;
+    line-height: 1.78571;
+    letter-spacing: -1.12px;
+  }
+  
+  .portfolio__list-icon {
+    font-size: 28px;
+    line-height: 2.14286;
+    letter-spacing: -1.12px;
+  }
+}
+
+@media all and (max-width: 520px) {
+  .portfolio {
+    padding: 70px 14px 30px;
+    color: white;
+    box-sizing: border-box;
+  }
+  
+  .portfolio__title {
+    font-size: 14px;
+    line-height: 1.42857;
+    margin: 0;
+  }
+  
+  .portfolio__link-list {
+    margin: 40px 0 0;
+  }
+  
+  .portfolio__list-element {
+    border-bottom: 1px solid #E6E6E6;
+    min-height: 48px;
+  }
+  
+  .portfolio__list-text {
+    font-size: 18px;
+    line-height: 1.55556;
+    letter-spacing: -0.72px;
+  }
+  
+  .portfolio__list-icon {
+    font-size: 18px;
+    line-height: 1.55556;
+    letter-spacing: -0.72px;
+  }
+}

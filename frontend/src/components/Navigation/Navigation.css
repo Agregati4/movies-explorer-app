@@ -1,0 +1,236 @@
+.navigation {
+  width: 59.3%;
+}
+
+.navigation__container {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.navigation__cross {
+  background-image: url('../../images/navigation__cross.svg');
+  width: 20px;
+  height: 20px;
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0;
+  position: absolute;
+  top: 27px;
+  right: 27px;
+  display: none;
+  cursor: pointer;
+  transition: opacity .2s linear;
+}
+
+.navigation__cross {
+  opacity: 0.7;
+}
+
+.navigation__button {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.33;
+  color: white;
+  padding: 0;
+  cursor: pointer;
+  transition: opacity .2s linear;
+}
+
+.navigation__button:hover {
+  opacity: 0.7;
+}
+
+.navigation__button_type_main-link {
+  display: none;
+}
+
+.navigation__button_type_saved-films {
+  margin: 0 auto 0 18px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.38462;
+}
+
+.navigation__button_type_saved-films:focus {
+  font-weight: 500;
+}
+
+.navigation__button_type_films {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.38462;
+}
+
+.navigation__button_type_films:focus {
+  font-weight: 500;
+}
+
+.navigation__button_type_signup {
+  margin: 0 0 0 auto;
+}
+
+.navigation__button_type_signin {
+  color: black;
+  min-width: 76px;
+  min-height: 32px;
+  background-color: #3DDC84;
+  border-radius: 3px;
+  margin: 0 0 0 30px;
+}
+
+.navigation__button_loggedIn {
+  background-color: #313131;
+  border-radius: 20px;
+  min-width: 100px;
+  color: white;
+  font-size: 14px;
+  line-height: 1.14286;
+  margin: 0;
+}
+
+.navigation__button_active {
+  font-weight: 500;
+}
+
+.navigation__button_display-none {
+  display: none;
+}
+
+@media all and (max-width: 768px) {
+  .navigation_blackout-background::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.3;
+  }
+
+  .navigation__container_pull-out-menu_open {
+    position: fixed;
+    height: 100vh;
+    width: 67.7vw;
+    top: 0;
+    right: 0;
+    background-color: #202020;
+    z-index: 1;
+    flex-direction: column;
+    align-items: center;
+    padding: 159px 0 90px;
+    justify-content: flex-start;
+    transition: linear .2s;
+  }
+
+  .navigation__container_pull-out-menu_close {
+    margin-right: -100%;
+  }
+
+  .navigation__cross {
+    display: block;
+  }
+
+  .navigation__cross_mobile-display-none {
+    display: none;
+  }
+
+  .navigation__button {
+    font-size: 18px;
+    line-height: normal;
+    margin: 0 0 28px;
+  }
+
+  .navigation__button_type_main-link {
+    display: block;
+  }
+
+  .navigation__button_type_saved-films {
+    margin: 0;
+  }
+
+  .navigation__button_type_saved-films:focus {
+    border-bottom: 2px solid white;
+  }
+
+  .navigation__button_type_films:focus {
+    border-bottom: 2px solid white;
+  }
+
+  .navigation__button_type_signup {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.33;
+  }
+
+  .navigation__button_type_signin {
+    font-size: 12px;
+    line-height: 1.33;
+    margin: 0;
+  }
+
+  .navigation__button_loggedIn {
+    font-size: 14px;
+    line-height: 1.14286;
+    margin: 621px 0 0;
+  }
+
+  .navigation__button_loggedOut {
+    margin: 0 0 0 30px;
+  }
+
+  .navigation__button_mobile-display-none {
+    display: none;
+  }
+}
+
+@media all and (max-width: 520px) {
+  .navigation {
+    width: 59.3%;
+  }
+
+  .navigation__container_pull-out-menu_open {
+    width: 100vw;
+    padding: 144px 0 46px;
+  }
+  
+  .navigation__cross {
+    top: 27px;
+    right: 27px;
+    transition: opacity .2s linear;
+  }
+
+  .navigation__cross:hover {
+    opacity: 0.8;
+  }
+  
+  .navigation__button_type_signup {
+    font-size: 10px;
+    line-height: 1.6;
+  }
+  
+  .navigation__button_type_signin {
+    font-size: 10px;
+    line-height: 1.6;
+    min-width: 54px;
+    min-height: 26px;
+    margin: 0 0 0 14px;
+  }
+  
+  .navigation__button_loggedIn {
+    border-radius: 20px;
+    min-width: 100px;
+    margin: 444px 0 0;
+  }
+
+  .navigation__button_active {
+    border-bottom: 2px solid white;
+  }
+}

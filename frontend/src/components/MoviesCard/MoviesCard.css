@@ -1,0 +1,140 @@
+.movies-card {
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+  max-height: 233px;
+}
+
+.movies-card__image-link {
+  border-radius: 9px;
+}
+
+.movies-card__save-condition {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background-color: #313131;
+  background-repeat: no-repeat;
+  border: none;
+  padding: 0;
+  color: #FFF;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 0.9;
+  min-width: 72px;
+  min-height: 21px;
+  border-radius: 30px;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  cursor: pointer;
+  transition: opacity .2s linear;
+}
+
+.movies-card__save-condition_saved {
+  min-width: 21px;
+  background-image: url('../../images/saved-card-icon.svg');
+  display: flex;
+}
+
+.movies-card__image {
+  display: block;
+  border-radius: 9px;
+  cursor: pointer;
+  height: 86.27%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.movies-card__image-link:hover + .movies-card__save-condition {
+  display: flex;
+}
+
+.movies-card__save-condition:hover {
+  display: flex;
+  opacity: 0.8;
+}
+
+.movies-card__save-condition_saved:hover {
+  opacity: 1;
+}
+
+.movies-card__save-condition_saved-movies-page {
+  min-width: 21px;
+  background-image: url('../../images/delete-saved-card-icon.svg');
+}
+
+.movies-card__description {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 14px 14px 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.movies-card__film-title {
+  color: #FFF;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 250px;
+}
+
+.movies-card__film-duration {
+  color: #8B8B8B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 0.909;
+  background-color: #2F2F2F;
+  border-radius: 3px;
+  min-width: 52px;
+  min-height: 18px;
+  margin: 0;
+}
+
+@media all and (max-width: 768px) {
+  .movies-card {
+    min-height: 233px;
+  }
+
+  .movies-card__image {
+    height: 81.55%;
+  }
+  
+  .movies-card__description {
+    padding: 25px 0 0;
+  }
+}
+
+@media all and (max-width: 520px) {
+  .movies-card {
+    max-height: 202px;
+    min-height: 200px;
+  }
+  
+  .movies-card__save-condition {
+    top: 10px;
+    right: 10px;
+    display: flex;
+  }
+  
+  .movies-card__image {
+    height: 83.17%;
+  }
+  
+  .movies-card__description {
+    padding: 17px 0 0;
+  }
+  
+  .movies-card__film-title {
+    font-size: 12px;
+    max-width: 240px;
+  }
+}
