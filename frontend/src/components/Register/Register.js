@@ -15,7 +15,7 @@ function Register(props) {
 
   React.useEffect(() => {
     if (props.isLoggedIn) {
-      props.navigate('/');
+      navigate('/');
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
