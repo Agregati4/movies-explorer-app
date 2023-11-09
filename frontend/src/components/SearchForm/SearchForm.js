@@ -12,7 +12,7 @@ function SearchForm(props) {
 
     !props.isSavedMoviesPage && props.setIsPreloaderActive(true);
 
-    props.onSubmitSearchForm(props.savedMoviesData);
+    props.onSubmitSearchForm();
   }
 
   return (

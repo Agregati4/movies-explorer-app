@@ -4,8 +4,10 @@ import logo from '../../images/logo.svg';
 import AuthForm from '../AuthForm/AuthForm';
 import '../Header/Header.css';
 import FormValidation from '../FormValidation/FormValidation';
+import { useNavigate } from 'react-router-dom';
 
 function Register(props) {
+  const navigate = useNavigate();
   const formRef = React.createRef();
   const { handleInputChange, isFormValid, values, errors } = FormValidation(
     formRef, { "name-input": "", "email-input": "", "password-input": "" }, { "name-input": "", "email-input": "", "password-input": "" }
@@ -26,15 +28,15 @@ function Register(props) {
     props.onSignUp({ name: values["name-input"], email: values["email-input"], password: values["password-input"] })
   }
 
-  const handleNavigateToSignIn = () => {
-    props.handleNavigate('/signin');
+  const navigateToSignIn = () => {
+    navigate('/signin');
     props.setSignErrorMessage("");
   }
 
   return (
     <section className="register">
       <div className="register__container">
-        <img onClick={ () => props.handleNavigate('/') } src={ logo } className="logo" alt="Логотип" />
+        <img onClick={ () => navigate('/') } src={ logo } className="logo" alt="Логотип" />
         <h1 className="register__title">Добро пожаловать!</h1>
         <AuthForm
           regButtonText={ props.regButtonText }
@@ -48,7 +50,7 @@ function Register(props) {
         />
         <div className="register__underform-text-container">
           <p className="register__text">Уже зарегистрированы?</p>
-          <span onClick={ handleNavigateToSignIn } className="register__button">Войти</span>
+          <span onClick={ navigateToSignIn } className="register__button">Войти</span>
         </div>
       </div>
     </section>

@@ -3,6 +3,7 @@
   position: relative;
   box-sizing: border-box;
   max-height: 233px;
+  min-height: 233px;
 }
 
 .movies-card__image-link {
